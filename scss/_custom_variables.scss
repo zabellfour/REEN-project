@@ -1,0 +1,79 @@
+/* colors */
+
+
+/* text-colors */
+
+$text-color: #73879c;
+$brand-color: #00bc9c;
+$header-color: #506a85;
+$gallery-text: #a3b1bf;
+$footer-text: #707e8c;
+
+/* bg-colors,border-color*/
+
+$gray-bg: #f5f7fa;
+$grey-border: #eff1f3;
+$brand-semi-transparent: rgba($brand-color, 0.8);
+$gray-semi-transparent:rgba(0, 0, 0, 0.15);
+$white-def: #fff;
+
+/* social-bg-colors */
+
+$fb-bg: #4668b3;
+$g-bg: #de5745;
+$tw-bg: #2fbbed;
+$pin-bg: #d94348;
+$be-bg: #3079ff;
+$drb-bg: #eb6397;
+$prefooter-bg:#2f4052;
+$footer-bg:#283645;
+
+/* type */
+
+$fonf-famyly-default: 'Lato-Bold',
+Arial,
+Helvetica,
+sans-serif;
+$font-size-default: 16px;
+$font-size-15: 15px;
+$font-size-14: 15px;
+$font-size-small: 12px;
+$head-gallery: 70px;
+$head-mid:44px;
+$head-small:26px;
+
+/* mixins */
+
+@mixin fs-lh($font-size, $lh:2) {
+    font-size: $font-size;
+    line-height: $font-size+$lh;
+}
+
+@mixin ul-res() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin change-color($bgc, $txtc) {
+    color: $bgc;
+    background-color: $txtc;
+}
+
+@mixin respond-to($media) {
+    @if $media==handhelds {
+        @media only screen and (max-width: 479px) {
+            @content;
+        }
+    }
+    @else if $media==wide-handhelds {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $media==tablets {
+        @media only screen and (max-width: 959px) {
+            @content;
+        }
+    }
+}

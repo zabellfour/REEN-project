@@ -1,0 +1,66 @@
+.item {
+    position: relative;
+    .gallery-inner {
+        position: absolute;
+        top: 30%;
+        @include respond-to(wide-handhelds) {
+            top: 10%;
+        }
+        left: 0;
+        width: 100%;
+        text-align: center;
+        .inner-wrapper {
+            
+            @include respond-to(wide-handhelds) {
+                max-width: 70%;
+            }
+             @include respond-to(handhelds) {
+                 max-width: 90%;
+                }
+            max-width: 80%;
+            margin: 0 auto;
+            h2 {
+                @include respond-to(tablets) {
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                }
+                @include respond-to(wide-handhelds) {
+                    font-size: 25px;
+                    margin-bottom: 10px;
+                }
+                @include respond-to(handhelds) {
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                }
+                color: #fff;
+                font-size: $head-gallery;
+                text-transform: uppercase;
+                margin: 0 0 30px;
+            }
+            p {
+                @include fs-lh(24px, 4);
+                font-family: 'SourceSansProRegular';
+                color: $gallery-text;
+                @include respond-to(wide-handhelds) {
+                    @include fs-lh(14px, 2);
+                    color: #fff;
+                }
+                @include respond-to(handhelds) {
+                    @include fs-lh(12px, 1);
+                    margin-bottom: 5px;
+                }
+            }
+            button {
+                @include respond-to(handhelds) {
+                   padding: 2px 5px;
+                }
+            }
+        }
+    }
+}
+
+.owl-buttons {
+    @include respond-to(wide-handhelds) {
+        display: none;
+    }
+}

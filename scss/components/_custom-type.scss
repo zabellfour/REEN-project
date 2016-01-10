@@ -1,0 +1,26 @@
+h1,.h1 {
+	font-style: 0;
+	line-height: 0;
+	margin: 0;
+}
+h3,.h3{
+	margin: 0 0 20px 0;
+	font-size: $font-size-default;
+	color: $header-color;
+	font-family: 'Lato-Bold';
+}
+.uppercase{
+	text-transform: uppercase;
+}
+h5,.h5{
+	color:$white-def;
+	font-family: 'Lato-Bold';
+	text-transform: uppercase;
+	margin: 0 0 25px;
+
+}
+p{
+	margin: 0 0 15px 0;
+	line-height: 22px;
+	    font-family: 'SourceSansProRegular';
+}

@@ -1,0 +1,13 @@
+.btn-primary{
+	border:none;
+	padding: 12px 20px 10px;
+	border-bottom: 2px solid darken($brand-color,20%);
+	text-transform: uppercase;
+}
+.btn-smallest{
+	padding:2px 5px;
+	font-size: 11px;
+}
+.back-to-top{
+	padding: 7px;
+}

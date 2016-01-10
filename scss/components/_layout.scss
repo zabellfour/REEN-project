@@ -1,0 +1,18 @@
+body {
+    @include fs-lh($font-size-default);
+    font-family: $fonf-famyly-default;
+    color: $text-color;
+    min-width: 320px;
+    @include respond-to(handhelds) {
+        /*     padding:0 15px */
+    }
+ 
+}
+
+a {
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        color: $brand-color;
+    }
+}

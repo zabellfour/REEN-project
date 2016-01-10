@@ -1,0 +1,198 @@
+.section-block {
+    text-align: center;
+    padding: 100px 0;
+    h3,
+    .h3 {
+        font-size: $head-mid;
+        color: $header-color;
+        font-family: Lato-Bold;
+        margin: 0 0 35px 0;
+    }
+    h4,
+    .h4 {
+        font-size: $head-small;
+        color: $header-color;
+        font-family: Lato-Bold;
+        margin: 0 0 35px 0;
+    }
+    p {
+        color: $text-color;
+        margin: 0 0 50px 0;
+    }
+    .description {
+        font-size: $font-size-14;
+    }
+    .svg-holder {
+        padding-left: 70px;
+        position: relative;
+        [class^="icon-"],
+        [class*=" icon-"] {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            font-size: 60px;
+            color: $brand-color;
+            transition: transform 0.4s, color 0.7s;
+            &:hover {
+                transform: scale(0.8);
+                color: $text-color;
+            }
+        }
+    }
+}
+
+.thumb-block {
+    .thumbnail {
+        .caption {
+            padding: 5px 0 5px;
+            background: #fff;
+            border-bottom: 2px solid $gallery-text;
+            border-radius: 0 0 10px 10px;
+            margin-bottom: 35px;
+        }
+        &:hover {
+            h3,
+            .h3,
+            p {
+                color: $brand-color;
+            }
+        }
+        p {
+            margin-bottom: 5px;
+        }
+        width: 100%;
+        &:after,
+        &:before {
+            display: none;
+        }
+        a {
+            img {
+                width: 100%;
+            }
+            width: 100%;
+            display: block;
+            position: relative;
+            &:after {
+                position: absolute;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $brand-semi-transparent;
+                transition: top, 1s;
+                content: '';
+            }
+            &:before {
+                content: "+";
+                font-size: 35px;
+                position: absolute;
+                top: -100%;
+                left: 50%;
+                color: $white-def;
+                margin-top: -25px;
+                margin-left: -10px;
+                z-index: 999;
+                transition: top, 0.35s;
+            }
+            &:hover {
+                &:after {
+                    top: 0%;
+                }
+                &:before {
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+
+#banner_carousel2 {
+    .thumbnail {
+        padding: 0 10px;
+    }
+}
+
+.bg-white {
+    background: $white-def;
+}
+
+.bg-grey {
+    background: $gray-bg;
+}
+
+.prefooter {
+    padding: 50px 0;
+    background: $prefooter-bg;
+    .container >div {
+        overflow: hidden;
+        >div {
+            margin-bottom: 55px;
+            overflow: hidden;
+            @include respond-to(wide-handhelds) {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 0;
+        width: 100%;
+        @include respond-to(wide-handhelds) {
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+    p {
+        color: $gallery-text;
+        margin: 0 0 15px;
+        font-size: 14px;
+    }
+    .thumbnail {
+        max-width: 90px;
+            @include respond-to(wide-handhelds) {
+            
+float: none;display: inline-block;
+            
+        }
+    }
+    .contact__list {
+        @include ul-res();
+        li {
+            font-size: 13px;
+            margin-bottom: 7px;
+            span:before{
+                @include respond-to(wide-handhelds){float: none;}
+            }
+        }
+    }
+    .subscribe {
+        .form-inner {
+            width: 100%;
+            height: 40px;
+            line-height: 38px;
+            font-size: 14px;
+            background: $gray-semi-transparent;
+            border-radius: 10px;
+            padding: 0 5px;
+            input {
+                border: none;
+                background: none;
+                float: left;
+                width: 60%;
+                float: left;
+                outline: none;
+            }
+            button {
+                float: right;
+                margin: 7px;
+                font-size: 10px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+input {
+    outline: none;
+}
